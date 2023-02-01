@@ -1,9 +1,11 @@
-logs
-target
+.cache/
 /.bsp
+/.classpath
 /.idea
 /.idea_modules
-/.classpath
+/.lsp
 /.project
 /.settings
 /RUNNING_PID
+logs
+target
