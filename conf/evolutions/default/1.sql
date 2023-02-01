@@ -1,5 +1,4 @@
 -- users schema
-
 -- !Ups
 CREATE TABLE
   users (
