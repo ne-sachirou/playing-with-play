@@ -5,7 +5,7 @@ object polaris extends PlayModule with SingleModule {
 
   def scalaVersion = "2.13.10"
   def playVersion = "2.8.19"
-  def twirlVersion = "1.5.1"
+  def twirlVersion = "1.5.2"
 
   object test extends PlayTests
 }
