@@ -7,6 +7,8 @@ lazy val root = (project in file(".")).enablePlugins(PlayScala)
 
 scalaVersion := "2.13.10"
 
+scalacOptions += "-Ywarn-unused"
+
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.1.0" % Test
 libraryDependencies ++= Seq(
@@ -21,3 +23,7 @@ libraryDependencies ++= Seq(
 
 // Adds additional packages into conf/routes
 // play.sbt.routes.RoutesKeys.routesImport += "io.mackerel.binders._"
+
+ThisBuild / scalafixScalaBinaryVersion := "2.13"
+ThisBuild / semanticdbEnabled := true
+ThisBuild / semanticdbVersion := scalafixSemanticdb.revision

@@ -13,7 +13,7 @@ format-clj:
 
 .PHONY: format-scala
 format-scala:
-	sbt scalafmtAll
+	sbt scalafixAll scalafmtAll
 
 .PHONY: format-sql
 format-sql:
@@ -28,8 +28,14 @@ lint-clj:
 
 .PHONY: lint-scala
 lint-scala:
-	sbt scalafmtCheckAll
+	sbt scalafmtCheckAll 'scalafixAll --check'
 
 .PHONY: reset
 reset: ## Reset development environment.
 	./scripts/reset.clj
+
+.PHONY: test
+test: test-scala ## Test
+
+test-scala:
+	sbt test
