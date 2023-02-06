@@ -8,4 +8,5 @@
 /.settings
 /RUNNING_PID
 logs
+node_modules/
 target
