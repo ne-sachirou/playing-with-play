@@ -1,0 +1,28 @@
+{
+  "name": "polaris",
+  "version": "1.0.0",
+  "description": "Playing with Play.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npm -w packages/main test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ne-sachirou/playing-with-play.git"
+  },
+  "author": "ne_Sachirou <utakata.c4se@gmail.com>",
+  "license": "CC0-1.0",
+  "bugs": {
+    "url": "https://github.com/ne-sachirou/playing-with-play/issues"
+  },
+  "homepage": "https://github.com/ne-sachirou/playing-with-play#readme",
+  "workspaces": [
+    "packages/main"
+  ],
+  "devDependencies": {
+    "prettier": "^2.8.3"
+  }
+}
