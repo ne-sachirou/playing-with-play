@@ -5,11 +5,15 @@ help:
 	@awk -F':.*##' '/^[-_a-zA-Z0-9]+:.*##/{printf"%-12s\t%s\n",$$1,$$2}' $(MAKEFILE_LIST) | sort
 
 .PHONY: format
-format: format-clj format-scala format-sql ## Format codes.
+format: format-clj format-md format-scala format-sql ## Format codes.
 
 .PHONY: format-clj
 format-clj:
 	cljstyle fix
+
+.PHONY: format-md
+format-md:
+	npx prettier -w *.md
 
 .PHONY: format-scala
 format-scala:
