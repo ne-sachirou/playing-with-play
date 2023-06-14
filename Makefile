@@ -37,5 +37,6 @@ reset: ## Reset development environment.
 .PHONY: test
 test: test-scala ## Test
 
+.PHONY: test-scala
 test-scala:
 	sbt test
